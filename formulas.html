@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulalar</title>
+    <link rel="icon" href="logo_html.png"
+</head>
+<body>
+  
+    <h1>Kinematika</h1>
+ <p>Formulasini topish kerak bo'lgan fizik kattalikni kiriting</p>
+  
+   <input id="inputValue">
+   <button onclick="guess()">Kiritish</button>
+   <p id="result"></p>
+   
+   <script>
+    
+     function guess(){
+      var result = "";
+      var text = document.getElementById("inputValue").value;
+      
+       if(text === "yo'l") {
+         result = "S=vₒᵣₜ/tᵤₘ S=vₒt+at²/2 S=(v²-vₒ²)/2a";
+       }
+       else if(text === "vaqt") {
+         result = "t=S/v t=(v-vₒ)/a tₖ=vₒ/g t=√(2h/g) t=TN";  
+       }
+       else if(text === "tezlik") {
+         result = "v=S/t v=vₒ+at v=vₒ+gt v=√(vₒ²+2gh) v=ωR v=√(aₘᵢR) v=√(gR)";
+       }
+       else if(text === "tezlanish") {
+         result = "a=(v-vₒ)/t a=(v²-vₒ²)/2S a=2S/t² aₘᵢ=v²/R aₘᵢ=ω²R";
+       }
+       else if(text ==="balandlik") {
+         result = "h=vₒt+gt²/2 hₘₐₓ=vₒ²/2g h=(v²⁻vₒ²)/2g";
+       }
+       else if(text === "burchak tezlik") {
+         result = "ω=α/t ω=v/R ω=2πγ ω=√(a/R)";
+       }
+       else if(text === "aylanish chastotasi") {
+         result = "γ=N/t γ=1/T γ=ω/2π"; 
+       }
+       else if(text === "aylanish davri") {
+         result = "T=t/N T=1/γ T=2π/ω";
+       }
+       else if(text === "natijaviy ko'chish") {
+         result = "l=√(a²+b²+2absinα) S=√(x²+y²)"; 
+       }
+       else if(text === "yassi burchak") {
+         result = "n=180ᵒα/π α=πn/180ᵒ"; 
+       }
+       else {
+         result = "Iltimos qaytadan urunib ko'ring. Unutmang bu faqat kinematika uchun hisoblanib, kattalik to'g'ri, kichkina lotin harflar bilan yozilishi shart. Masalan, tezlik.";
+       }
+        
+       document.getElementById("result").innerHTML = result;
+     }
+ 
+   </script>
+   
+</body>
+</html>
